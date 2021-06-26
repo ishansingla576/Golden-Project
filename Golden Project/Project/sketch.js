@@ -1,14 +1,6 @@
 var _canvasWidth = 1500, _canvasHeight = 800;
-var groundSprite, groundSprite1, groundGroup;
 
-var player, playerGroundCheck;
-var playerIdle, playerRun, playerJump, playerFall;
-var leftPressed, rightPressed, jumpPressed, sprintPressed;
-var isJumping = false;
-
-var player_isGrounded;
-
-function preload() 
+function preload()
 {
     LoadPlayerAnimations();
 }

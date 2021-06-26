@@ -1,3 +1,6 @@
+var player, playerGroundCheck;
+var isPlayerGrounded;
+
 function CreatePlayer()
 {
     //create the player
@@ -27,7 +30,7 @@ function CollidePlayer()
 {
     //enable player collision with the ground
     player.collide(groundGroup);
-    player_isGrounded = playerGroundCheck.isTouching(groundGroup);
+    isPlayerGrounded = playerGroundCheck.isTouching(groundGroup);
 
 }
 

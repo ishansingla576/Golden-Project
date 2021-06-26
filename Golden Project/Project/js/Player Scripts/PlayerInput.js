@@ -1,3 +1,5 @@
+var leftPressed, rightPressed, jumpPressed, sprintPressed;
+
 function KeyboardInput() 
 {
     if (keyIsDown(LEFT_ARROW) || keyDown("a")) 

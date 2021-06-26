@@ -1,3 +1,5 @@
+var isJumping = false;
+
 function MoveThePlayer() 
 {
     //move the player to the left
@@ -43,7 +45,7 @@ function MoveThePlayer()
     }
 
     //check if the player is jumping 
-    if (player_isGrounded)
+    if (isPlayerGrounded)
     {
         isJumping = false;
     }

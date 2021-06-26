@@ -1,3 +1,5 @@
+var playerIdle, playerRun, playerJump, playerFall;
+
 function LoadPlayerAnimations()
 {
     playerIdle = loadAnimation("Assets/Player Animations/Idle/0.png", "Assets/Player Animations/Idle/1.png", "Assets/Player Animations/Idle/2.png", "Assets/Player Animations/Idle/3.png", "Assets/Player Animations/Idle/4.png", "Assets/Player Animations/Idle/5.png");
@@ -8,7 +10,7 @@ function LoadPlayerAnimations()
 
 function AnimateThePlayer() 
 {
-    if (player_isGrounded)
+    if (isPlayerGrounded)
     {
         if (player.velocityX < 0) 
         {
