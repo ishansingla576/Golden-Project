@@ -19,17 +19,7 @@ function setup()
     //create the canvas
     createCanvas(_canvasWidth, _canvasHeight);
 
-    groundGroup = new Group();
-
-    //create ground
-    groundSprite = createSprite(_canvasWidth / 2, 750, _canvasWidth, 20);
-    groundSprite1 = createSprite(_canvasWidth / 2, 600, 200, 20);
-
-    groundGroup.add(groundSprite);
-    groundGroup.add(groundSprite1);
-    //color the ground
-    groundSprite.shapeColor = "brown";
-
+    CreateLevel();
     CreatePlayer();
 
 }//setup
@@ -40,18 +30,7 @@ function draw()
     //set the background color
     background(255);
 
-    SetGroundCheckPosition();
-
-    player_isGrounded = playerGroundCheck.isTouching(groundGroup);
-
-    KeyboardInput();
-    MoveThePlayer();
-    AnimateThePlayer();
-    ClampThePlayer();
-    gravity();
-
-    //enable player collision with the ground
-    player.collide(groundGroup);
+    CallPlayerFunctions();
 
     //draw all the sprites
     drawSprites();

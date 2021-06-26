@@ -12,6 +12,8 @@ function CreatePlayer()
 
     playerGroundCheck = createSprite(player.x,player.y + 20, 25, 25);
     playerGroundCheck.visible = false;
+
+    
 }
 
 function SetGroundCheckPosition()
@@ -19,4 +21,23 @@ function SetGroundCheckPosition()
     playerGroundCheck.x = player.x;
     playerGroundCheck.y = player.y + 45;
 
+}
+
+function CollidePlayer()
+{
+    //enable player collision with the ground
+    player.collide(groundGroup);
+    player_isGrounded = playerGroundCheck.isTouching(groundGroup);
+
+}
+
+function CallPlayerFunctions()
+{
+    SetGroundCheckPosition();
+    KeyboardInput();
+    MoveThePlayer();
+    AnimateThePlayer();
+    ClampThePlayer();
+    gravity();
+    CollidePlayer();
 }
