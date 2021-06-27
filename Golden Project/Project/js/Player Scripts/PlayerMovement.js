@@ -56,12 +56,11 @@ function ClampThePlayer()
 {
     wall_1 = createSprite(0, 370, 30, _canvasHeight - 70);
     wall_1.visible = false;
+    groundGroup.add(wall_1);
 
     wall_2 = createSprite(_canvasWidth, 370, 30, _canvasHeight - 70);
     wall_2.visible = false;
-
-    player.collide(wall_1);
-    player.collide(wall_2);
+    groundGroup.add(wall_2);
 }
 
 function gravity() 

@@ -1,4 +1,5 @@
 var _canvasWidth = 1500, _canvasHeight = 800;
+var camera;
 
 function preload()
 {
@@ -17,7 +18,9 @@ function setup()
     createCanvas(_canvasWidth, _canvasHeight);
 
     CreateLevel();
+    CreateEnemies();
     CreatePlayer();
+    enemy.debug = true;
 
 }//setup
 
@@ -26,11 +29,15 @@ function draw()
 {
     //set the background color
     background(255);
+
     image(bg1,0,0,_canvasWidth, _canvasHeight);
     image(bg2,0,0,_canvasWidth, _canvasHeight);
     image(bg3,0,0,_canvasWidth, _canvasHeight);
     image(bg4,0,0,_canvasWidth, _canvasHeight);
 
+   
+    CollideEnemies();
+    EnemyGravity();
     CallPlayerFunctions();
 
     //draw all the sprites
