@@ -26,7 +26,6 @@ function AnimateThePlayer()
 
         else if (player.velocityX === 0) 
         {
-            //player.mirrorX(1);
             player.changeAnimation("Player Idle");
         }
 
