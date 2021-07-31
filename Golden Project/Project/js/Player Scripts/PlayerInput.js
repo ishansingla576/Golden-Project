@@ -1,4 +1,5 @@
 var leftPressed, rightPressed, jumpPressed, sprintPressed;
+var attackPressed;
 
 function KeyboardInput() 
 {
@@ -19,4 +20,10 @@ function KeyboardInput()
         jumpPressed = true;
     }
     else jumpPressed = false;
+
+    if(keyDown("0") || keyDown("f"))
+    {
+        attackPressed = true;
+    }
+    else attackPressed = false;
 }// KeyboardInput

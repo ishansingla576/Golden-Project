@@ -1,6 +1,5 @@
-var _canvasWidth = 1500, _canvasHeight = 800;
-var camera;
-
+let _canvasWidth = 1500, _canvasHeight = 800;
+var bg1, bg2, bg3, bg4;
 function preload()
 {
     bg1 = loadImage("Assets/Level/background1.png");
@@ -21,7 +20,6 @@ function setup()
     CreateEnemies();
     CreatePlayer();
     enemy.debug = true;
-
 }//setup
 
 //called every frame
@@ -34,6 +32,8 @@ function draw()
     image(bg2,0,0,_canvasWidth, _canvasHeight);
     image(bg3,0,0,_canvasWidth, _canvasHeight);
     image(bg4,0,0,_canvasWidth, _canvasHeight);
+
+    //print(frameRate().toFixed(2));
 
    
     CollideEnemies();

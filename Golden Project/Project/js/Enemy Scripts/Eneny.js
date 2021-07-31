@@ -7,7 +7,7 @@ function CreateEnemies()
 
 function CollideEnemies()
 {
-    enemy.collide(player);
+    player.collide(enemy);
     enemy.collide(groundGroup);
 }
 

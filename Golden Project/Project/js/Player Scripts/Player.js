@@ -10,6 +10,8 @@ function CreatePlayer()
     player.addAnimation("Player Run", playerRun);
     player.addAnimation("Player Jump", playerJump);
     player.addAnimation("Player Fall", playerFall);
+    player.addAnimation("Player Attack1", playerAttack1);
+    player.addAnimation("Player Attack2", playerAttack2);
 
     player.setCollider("rectangle", 0, 0, 70, 90);
 
